@@ -1,0 +1,35 @@
+call plug#begin('~/.vim/plugged')
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'chr4/nginx.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'godlygeek/tabular' | Plug 'tpope/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'jvirtanen/vim-hcl'
+Plug 'lifepillar/pgsql.vim'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'stephpy/vim-yaml'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-rails'
+Plug 'vim-python/python-syntax'
+Plug 'vim-ruby/vim-ruby'
+Plug 'wgwoods/vim-systemd-syntax'
+Plug 'tpope/vim-eunuch'
+Plug 'unblevable/quick-scope'
+Plug 'vim-scripts/AutoComplPop'
+call plug#end()
+set nu
+set autoindent
+set tabstop=4
+set tabstop=4
+set colorcolumn=80
+set undodir=/tmp
+set undofile
+set wildmode=full
+set virtualedit=block
