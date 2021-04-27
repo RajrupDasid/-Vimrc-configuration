@@ -1,0 +1,73 @@
+pressing i in vim starts insert mode
+and pressing esc quit this
+if we wants to save any file we have to first press i to insert mode then type
+then also press esc to change to command mode 
+and then press the following syntax
+
+some basic commands --
+:q-quit vim
+:q!-quit vim (quit vim igonore changes)
+:w-save the document(specify the file name_)
+:wq-save document and quit vim
+
+to open all the files with single files go to the directory location and open
+power shell then type 
+# vim files name one by one with extensions or type vim *
+
+To edit all files in tabs, use:
+
+vim -p *
+
+To edit all files in horizontally split windows, use:
+
+vim -o *
+
+The other answers will not work if you have subdirectories. If you need to open all files in all subdirectories you can use command substitution:
+
+vim `find . -type f`
+
+
+
+If you want to ignore files in subdirectories write:
+
+vim `find . -type f -depth 1`
+
+
+
+
+Edit all files using a given pattern:
+
+vim `find . -name "*your*pattern*here*"`
+vim `find . -name "*.go"`
+
+. To open all files in the directory without opening files in subdirectories, use this:
+
+vim `find . -maxdepth 1 -type f`
+
+
+:args * 
+
+
+press :w to save .vimrc file
+make sure to make all before that  ~/.vim/undodir directory
+
+if not work 
+try iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni $HOME/vimfiles/autoload/plug.vim -Force
+in powershell   
+then     :source % to source and remap everyfile 
+then press :PlugInstall hit enter if some error happens it should tell you
+
+
+## to switch between files we have to call the files in our working  directory 
+
+by typing :e >file name> in the command mode we can open files in the vim 
+to check the files we have imported or we have currently we can check by them by using 
+
+:buffers to check files that we have in our working directory. if you get some error here that because you didn't save the current file
+make sure to save it :w this way
+
+then press :b followed by file numbers 
+like if we have two files 1 and 2 
+if we want to access them we can type :b1 for the first file and 
+:b2 for the second file
