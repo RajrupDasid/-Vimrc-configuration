@@ -71,3 +71,6 @@ then press :b followed by file numbers
 like if we have two files 1 and 2 
 if we want to access them we can type :b1 for the first file and 
 :b2 for the second file
+
+#@@##@#
+to open and hover between files press :b2 and enter in vim cmd line
