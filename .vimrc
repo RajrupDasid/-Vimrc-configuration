@@ -1,3 +1,4 @@
+autocmd TextChanged,TextChangedI <buffer> silent write
 " Set options if using spaces for indents (default).
 function PySpacesCfg()
   set expandtab
@@ -113,10 +114,11 @@ let g:go_fmt_command = "goimports"
 " Status line types/signatures
 let g:go_auto_type_info =1 
 "vim config strats here
-colorscheme slate 
+colorscheme molokai
 syntax on
 filetype plugin on
 filetype plugin indent on
+set completefunc=pythoncomplete
 set autowrite
 set nu
 set autoindent
@@ -134,7 +136,8 @@ set wildmode=full
 set virtualedit=block
 set encoding=utf-8
 set backspace=indent,eol,start
-"forgolang configure
+hi Normal          ctermfg=252 ctermbg=none
+"vim Plugins configs
 call plug#begin('~/.vim/plugged')
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chr4/nginx.vim'
@@ -171,3 +174,4 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
+
