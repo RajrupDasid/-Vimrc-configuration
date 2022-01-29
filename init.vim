@@ -4,6 +4,10 @@ call plug#begin("~/.vim/plugged")
 
   " Language Client
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}  
+  Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'}  
+  Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}  
+  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
   let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
   " TypeScript Highlighting
   Plug 'leafgarland/typescript-vim'
@@ -33,7 +37,7 @@ endif
 
 " Theme
 syntax enable
-colorscheme dracula
+"colorscheme dracula
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -99,6 +103,7 @@ set showmatch
 let python_highlight_all=1
 "enable airline theme for cool status bar
 let g:airline_theme='base16'
+let g:python3_host_prog="~/venvs/neovim/bin/python"
 "Java Setup
 "require 'nvim-treesitter.configs'.setup {
  " ensure_installed = maintained, -- one of all, "maintained (parsers with maintainers), or a list of languages
@@ -106,6 +111,4 @@ let g:airline_theme='base16'
    " enable = true,              
   "},
 "}
-
-
 
