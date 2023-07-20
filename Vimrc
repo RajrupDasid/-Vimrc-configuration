@@ -1,0 +1,22 @@
+syntax on
+set autowrite
+set nu
+set rnu
+set autoindent
+set tabstop=8
+set softtabstop=4
+set splitbelow
+set splitright
+set shiftwidth=4
+set textwidth=180
+set expandtab
+set fileformat=unix
+set undodir=/tmp
+set undofile
+set wildmode=full
+set virtualedit=block
+set encoding=utf-8
+set backspace=indent,eol,start
+"copy
+xnoremap <silent> <C-@> :w !wl-copy<CR><CR>
+
